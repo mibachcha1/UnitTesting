@@ -16,4 +16,5 @@ Unit Test Examples: [CalculatorTest.java](src\test\java\com\depaul\gsd\Calculato
 2. Confirm adding 7 to the initial value
 3. Confirm subtracting 10 from initial value
 
-Commit your code into your branch in the remote repository. Then, creat a pull request to merge your branch into the main branch.
+**Commit** your code into **your branch** in the remote repository. 
+Then, create a **pull request** to merge your branch into the main branch.
