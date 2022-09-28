@@ -1,23 +1,22 @@
 package com.depaul.gsd;
 
-import org.junit.jupiter.api.*;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.Test;
 
-//Static import helps to use assert methods directly, instead of e.g. Assert.assertEquals()
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
-
     Calculator calculator;
 
-//  The method annotated with @BeforeEach runs before each test
+    //  The method annotated with @BeforeEach runs before each test
     @BeforeEach
     void setUp() {
         calculator = new Calculator();
     }
 
-//  A method annotated with @Test defines a test method
+    //  A method annotated with @Test defines a test method
 //  @DisplayName can be used to define the name of the test which is displayed to the user
     @Test
     @DisplayName("Simple multiplication should work")
@@ -29,7 +28,7 @@ class CalculatorTest {
 
     }
 
-//  @RepeatedTest defines that this test method will be executed multiple times, in this example 5 times
+    //  @RepeatedTest defines that this test method will be executed multiple times, in this example 5 times
     @RepeatedTest(5)
     @DisplayName("Ensure correct handling of zero")
     void testMultiplyWithZero() {
@@ -40,5 +39,4 @@ class CalculatorTest {
         assertEquals(0, calculator.multiply(0, 5), "Multiple with zero should be zero");
         assertEquals(0, calculator.multiply(5, 0), "Multiple with zero should be zero");
     }
-
 }
